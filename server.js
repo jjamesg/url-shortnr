@@ -6,7 +6,7 @@ var routes = require('./app/routes/index.js');
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
 var MongoClient = require('mongodb').MongoClient;
-var monUrl = 'mongodb://localhost:27017/data';
+var monUrl = 'mongodb://james:pass@ds059205.mongolab.com:59205/shrtner';
 
 MongoClient.connect(monUrl, function(err, db) {
     if(err) console.error(err);
