@@ -1,9 +1,10 @@
-console.log('script loaded');
-
 $( document ).ready(function() {
     
+    console.log('script loaded')
+    
     var output = $('#output');
-    var apiUrl = 'https://url-shortnr-jjamesg.c9users.io/new?url=';
+    var apiUrlCloud = 'https://url-shortnr-jjamesg.c9users.io/new?url=';
+    var apiUrlHero = 'http://shrtner.herokuapp.com/new?url='
     
     $('#input').val('http://');
 
@@ -11,9 +12,9 @@ $( document ).ready(function() {
         
         var input = $('#input').val();
 
-        $.get(apiUrl + input, function(data){
+        $.get(apiUrlHero + input, function(data){
             console.log('data: ' + data);
-        output.val('https://url-shortnr-jjamesg.c9users.io/s/' + data);
+        output.val('http://shrtner.herokuapp.com/s/' + data);
         })
     });
     
