@@ -13,10 +13,7 @@ $( document ).ready(function() {
 
         $.get(apiUrl + input, function(data){
             console.log('data: ' + data);
-        output.html('https://url-shortnr-jjamesg.c9users.io/s/' + data + '<br>' 
-            
-        
-        );
+        output.val('https://url-shortnr-jjamesg.c9users.io/s/' + data);
         })
     });
     
@@ -24,6 +21,10 @@ $( document ).ready(function() {
     if (e.which == 13){
         $("#submit").click();
     }
+    
+    $('#output').click(function() {
+        this.select();
+    })
 });
 })
 
