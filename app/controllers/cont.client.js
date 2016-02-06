@@ -4,7 +4,9 @@ $( document ).ready(function() {
     
     var output = $('#output');
     var apiUrlCloud = 'https://url-shortnr-jjamesg.c9users.io/new?url=';
-    var apiUrlHero = 'http://shrtner.herokuapp.com/new?url='
+    var apiUrlHero = 'https://shrtner.herokuapp.com/new?url='
+    
+    //fix this ^^^^^
     
     $('#input').val('http://');
 
